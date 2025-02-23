@@ -36,7 +36,7 @@ export default function ChateToDocument( {doc}:{doc:Y.Doc}) {
 
         startTransition(async () => {
             const documentData = doc.get("document-store").toJSON();
-
+            console.log(documentData);
             const response = await fetch(`${process.env.NEXT_PUBLIC_CLERK_BASE_URL}/chatToDocument`, {
                 method: 'POST',
                 headers: {
@@ -50,6 +50,7 @@ export default function ChateToDocument( {doc}:{doc:Y.Doc}) {
 
             if (response.ok) {
                 const chatResponse = await response.json();
+                console.log(chatResponse);
                 setSummary(chatResponse?.response);
                 toast.success("Answer sent successfully!");
             } else {

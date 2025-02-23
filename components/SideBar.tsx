@@ -4,14 +4,13 @@ import { useCollection } from "react-firebase-hooks/firestore"
 import {
     Sheet,
     SheetContent,
-    SheetDescription,
     SheetHeader,
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
 import { MenuIcon } from 'lucide-react'
 import { useUser } from '@clerk/nextjs'
-import { collectionGroup, doc, query, where } from 'firebase/firestore'
+import { collectionGroup,  query, where } from 'firebase/firestore'
 import { db } from '@/firbase'
 import { useEffect, useState } from 'react'
 import { DocumentData } from 'firebase/firestore'

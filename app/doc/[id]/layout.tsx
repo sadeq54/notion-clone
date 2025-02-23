@@ -17,6 +17,7 @@ export default function DocLayout({children ,params}
     </RoomProvider>
   );
 }
+  
 
 // children here is the page.tsx
 

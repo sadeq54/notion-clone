@@ -11,7 +11,7 @@ import { getFirestore } from "firebase-admin/firestore";
 
 // this file that we installed from firbase service account key
 // allow the admin to access the database
-const serviceKey = process.env.FIREBASE_SERVICE_KEY;
+const serviceKey = require("@/service_key.json");
 
 let app: App;
 
